@@ -1,0 +1,10 @@
+{% if user.is_authenticated %}
+    <h1>Welcome, {{ user.username }}!</h1>
+    <ul>
+        {% for employee in employees %}
+            <li>{{ employee.full_name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You are not logged in.</p>
+{% endif %}
